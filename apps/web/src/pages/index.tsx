@@ -1,10 +1,18 @@
-import { Button } from 'ui'
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import { Heading, Container } from '@chakra-ui/react'
 
-export default function Web() {
+const Home: NextPage = () => {
   return (
-    <div>
-      <h1 id='1'>Web</h1>
-      <Button />
-    </div>
+    <>
+      <Head>
+        <title>Todo App</title>
+      </Head>
+      <Container>
+        <Heading>Todo App</Heading>
+      </Container>
+    </>
   )
 }
+
+export default Home
