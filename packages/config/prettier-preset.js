@@ -4,7 +4,8 @@ module.exports = {
   singleQuote: true,
   jsxSingleQuote: true,
   semi: false,
-  arrowParens: "always",
-  importOrder: ["^@lib/(.*)$", "^@components/(.*)$", "^[./]"],
+  arrowParens: 'always',
+  importOrder: ['^@/lib/(.*)$', '^@/components/(.*)$', '^@/ui/(.*)$', '^[./]'],
   importOrderSeparation: true,
-}
+  importOrderSortSpecifiers: true,
+};
