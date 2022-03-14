@@ -15,13 +15,15 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "apps/**/*.{js,jsx,ts,tsx}": [
-      "turbo run lint",
-      "turbo run format"
+    "apps/**/*.{js,ts,jsx,tsx}": [
+      "prettier --write",
+      "eslint --fix"
     ],
-    "packages/**/*.{js,jsx,ts,tsx}": [
-      "turbo run lint",
-      "turbo run format"
+    "*.json": [
+      "prettier --write"
+    ],
+    "packages/prisma/schema.prisma": [
+      "prisma format"
     ]
   },
   "devDependencies": {
