@@ -10,9 +10,23 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "apps/**/*.{js,jsx,ts,tsx}": [
+      "turbo run lint",
+      "turbo run format"
+    ],
+    "packages/**/*.{js,jsx,ts,tsx}": [
+      "turbo run lint",
+      "turbo run format"
+    ]
   },
   "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.5",
     "prettier": "^2.5.1",
     "turbo": "latest"
   },
