@@ -2,6 +2,8 @@ import { Container, Heading } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
+import Header from '@/components/ui/Header'
+
 const Home: NextPage = () => {
   return (
     <>
@@ -9,7 +11,7 @@ const Home: NextPage = () => {
         <title>Todo App</title>
       </Head>
       <Container>
-        <Heading>Todo App</Heading>
+        <Header />
       </Container>
     </>
   )
